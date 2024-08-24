@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Car Price Prediction</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="company">Select the Company</label>
+            {{ form.company }}
+        </div>
+
+        <div class="form-group">
+            <label for="model">Select the Model</label>
+            {{ form.model }}
+        </div>
+
+        <div class="form-group">
+            <label for="year">Select Year of Purchase</label>
+            {{ form.year }}
+        </div>
+
+        <div class="form-group">
+            <label for="fuel">Select Fuel Type</label>
+            {{ form.fuel }}
+        </div>
+
+        <div class="form-group">
+            <label for="kms">Enter No. of KMs Driven</label>
+            {{ form.kms }}
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Predict Price</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

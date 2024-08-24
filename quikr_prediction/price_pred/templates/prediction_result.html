@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+<div class="result-container">
+    <h2>Prediction Result</h2>
+    <p><strong>Company:</strong> {{ company }}</p>
+    <p><strong>Model:</strong> {{ model }}</p>
+    <p><strong>Year of Purchase:</strong> {{ year }}</p>
+    <p><strong>Fuel Type:</strong> {{ fuel }}</p>
+    <p><strong>Number of KMs Driven:</strong> {{ kms }}</p>
+    <!-- Add more result details as needed -->
+</div>
+
+</body>
+</html>
